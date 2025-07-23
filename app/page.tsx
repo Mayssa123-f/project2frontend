@@ -13,12 +13,14 @@ import UnderBanner from "./components/underBanner";
 
 export default function Page() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen font-[Poppins]">
       <Header />
       <Banner />
-      <main className="flex-grow">
-        <UnderBanner />
-      </main>
+      <div className="container mx-auto">
+        <main className="flex-grow">
+          <UnderBanner />
+        </main>
+      </div>
       <Footer />
     </div>
   );
