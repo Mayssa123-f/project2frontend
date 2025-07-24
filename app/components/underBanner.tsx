@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function VisitCountries() {
   return (
-    <section className="py-16 bg-white text-[#333]">
+    <section className="py-16 px-6 bg-white text-[#333]">
       <div className=" mx-auto">
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
