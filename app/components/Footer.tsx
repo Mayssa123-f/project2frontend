@@ -5,12 +5,12 @@ export default function Footer() {
   return (
     <footer className="bg-[#0000CD] text-white p-6 font-[Poppins]">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        {/* Logo */}
         <div className="flex items-center space-x-2">
           <Image src="/logo.png" alt="BonVoyage Logo" width={80} height={40} />
         </div>
-
-        {/* Social Media Links */}
+        <p className="text-sm text-center md:text-right">
+          &copy; {new Date().getFullYear()} BonVoyage. All rights reserved.
+        </p>
         <div className="flex space-x-4 text-white text-xl">
           <a
             href="https://facebook.com"
@@ -37,11 +37,6 @@ export default function Footer() {
             <FaTwitter />
           </a>
         </div>
-
-        {/* Copyright */}
-        <p className="text-sm text-center md:text-right">
-          &copy; {new Date().getFullYear()} BonVoyage. All rights reserved.
-        </p>
       </div>
     </footer>
   );

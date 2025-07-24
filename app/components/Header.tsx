@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,16 @@ export default function Header() {
     <header className="bg-[#0000CD] text-white p-4 shadow-md font-[Poppins]">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <Image src="/logo.png" alt="BonVoyage Logo" width={100} height={50} />
+          <Link href="/" passHref>
+            <div className="cursor-pointer">
+              <Image
+                src="/logo.png"
+                alt="BonVoyage Logo"
+                width={100}
+                height={50}
+              />
+            </div>
+          </Link>
         </div>
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
@@ -37,7 +47,7 @@ export default function Header() {
         </nav>
 
         <button
-          className="md:hidden text-white focus:outline-none"
+          className="md:hidden text-white focus:outline-none cursor-pointer"
           onClick={() => setIsOpen(true)}
         >
           <svg
@@ -60,7 +70,7 @@ export default function Header() {
         <div className="fixed inset-0 bg-[#0000CD] text-white z-50 flex flex-col items-center justify-center space-y-6 transition-all duration-300 ease-in-out">
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 text-white text-3xl"
+            className="absolute top-4 right-4 text-white text-3xl cursor-pointer transition duration-200 hover:text-[#7DF9FF] hover:scale-110"
           >
             &times;
           </button>

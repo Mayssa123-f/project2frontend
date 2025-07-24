@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function VisitCountries() {
   return (
-    <section className="py-16 px-6 bg-white text-[#333]">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 bg-white text-[#333]">
+      <div className=" mx-auto">
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Visit One Of Our Countries Now
@@ -13,7 +13,7 @@ export default function VisitCountries() {
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="flex-1 space-y-10">
             <div className="flex flex-col md:flex-row bg-gray-100 rounded-xl overflow-hidden shadow">
-              <div className="md:w-1/3">
+              <div className="md:w-1/3 h-[300px]">
                 <Image
                   src="/italy.jpg"
                   alt="Switzerland"
@@ -41,7 +41,7 @@ export default function VisitCountries() {
               </div>
             </div>
             <div className="flex flex-col md:flex-row bg-gray-100 rounded-xl overflow-hidden shadow">
-              <div className="md:w-1/3">
+              <div className="md:w-1/3 h-[300px]">
                 <Image
                   src="/bali.jpg"
                   alt="Caribbean"
