@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Poppins } from "next/font/google";
-
+import { countries } from "./data/countries";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
@@ -9,7 +9,7 @@ const poppins = Poppins({
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
-import UnderBanner from "./components/underBanner";
+import Countries from "./components/Countries";
 
 export default function Page() {
   return (
@@ -18,7 +18,7 @@ export default function Page() {
       <Banner />
       <div className="container mx-auto">
         <main className="flex-grow">
-          <UnderBanner />
+          <Countries />
         </main>
       </div>
       <Footer />
