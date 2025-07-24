@@ -24,7 +24,6 @@ export default function Page() {
         buttonLink="#explore"
       />
 
-      {/* Main content area that grows to fill space */}
       <main className="flex-grow">
         <div className="container mx-auto">
           <WeeklyOffers />
