@@ -1,12 +1,21 @@
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-[#0000CD] text-white p-6 font-[Poppins]">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center space-x-2">
-          <Image src="/logo.png" alt="BonVoyage Logo" width={80} height={40} />
+          <Link href="/" passHref>
+            <div className="cursor-pointer">
+              <Image
+                src="/logo.png"
+                alt="BonVoyage Logo"
+                width={100}
+                height={50}
+              />{" "}
+            </div>
+          </Link>
         </div>
         <p className="text-sm text-center md:text-right">
           &copy; {new Date().getFullYear()} BonVoyage. All rights reserved.

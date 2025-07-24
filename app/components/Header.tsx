@@ -24,14 +24,17 @@ export default function Header() {
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
             <li>
-              <a href="#" className="hover:text-[#7DF9FF]">
+              <a href="/" className="hover:text-[#7DF9FF]">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#7DF9FF]">
+              <Link
+                href="/about"
+                className="hover:text-[#7DF9FF] cursor-pointer"
+              >
                 About
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#" className="hover:text-[#7DF9FF]">
