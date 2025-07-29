@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
-
+import ReservationForm from "../components/reservation";
 import { Poppins } from "next/font/google";
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,7 +20,9 @@ export default function Page() {
         buttonLink="#explore"
       />
       <main className="flex-grow">
-        <div className="container mx-auto"></div>
+        <div className="container mx-auto">
+          <ReservationForm />
+        </div>
       </main>
 
       <Footer />

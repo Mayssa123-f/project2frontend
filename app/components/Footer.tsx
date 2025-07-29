@@ -9,7 +9,7 @@ export default function Footer() {
           <Link href="/" passHref>
             <div className="cursor-pointer">
               <Image
-                src="/logo.png"
+                src="/images/logo.png"
                 alt="BonVoyage Logo"
                 width={100}
                 height={50}
