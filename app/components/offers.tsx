@@ -6,7 +6,6 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "./WeeklyOffers.css";
 
 export default function WeeklyOffers() {
   return (
@@ -21,16 +20,21 @@ export default function WeeklyOffers() {
         </p>
       </div>
 
-      <div className="relative px-6 max-w-7xl mx-auto">
+      {/* Navigation Buttons */}
+      <div className="absolute top-1/2 left-4 z-10 transform -translate-y-1/2 swiper-button-prev text-blue-700 cursor-pointer"></div>
+      <div className="absolute top-1/2 right-4 z-10 transform -translate-y-1/2 swiper-button-next text-blue-700 cursor-pointer"></div>
+
+      <div className="px-6 max-w-7xl mx-auto relative">
         <Swiper
           modules={[Navigation, Pagination]}
           navigation={{
-            nextEl: ".swiper-button-next-custom",
-            prevEl: ".swiper-button-prev-custom",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           }}
           pagination={{
-            el: ".swiper-pagination-custom",
+            el: ".custom-pagination",
             clickable: true,
+            dynamicBullets: false,
           }}
           loop={true}
           spaceBetween={24}
@@ -39,6 +43,7 @@ export default function WeeklyOffers() {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
+          className="pb-10"
         >
           {offers.map((offer, index) => (
             <SwiperSlide key={index}>
@@ -86,10 +91,10 @@ export default function WeeklyOffers() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="swiper-button-prev-custom absolute left-[-50px] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer" />
-        <div className="swiper-button-next-custom absolute right-[-50px] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer" />
+
+        {/* Custom Pagination outside Swiper */}
+        <div className="custom-pagination flex justify-center mt-6"></div>
       </div>
-      <div className="swiper-pagination-custom mt-8"></div>
     </section>
   );
 }
