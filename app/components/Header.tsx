@@ -37,9 +37,12 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-[#7DF9FF]">
+              <Link
+                href="/reservation"
+                className="hover:text-[#7DF9FF] cursor-pointer"
+              >
                 Reservation
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#" className="hover:text-[#7DF9FF]">
@@ -98,13 +101,13 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/reservation"
                   onClick={() => setIsOpen(false)}
                   className="hover:text-[#7DF9FF]"
                 >
                   Reservation
-                </a>
+                </Link>
               </li>
               <li>
                 <a
