@@ -1,10 +1,14 @@
 "use client";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname(); // ✅ Get current path
+
+  const isActive = (path: string) => pathname === path;
 
   return (
     <header className="bg-[#0000CD] text-white p-4 shadow-md font-[Poppins]">
@@ -21,17 +25,15 @@ export default function Header() {
             </div>
           </Link>
         </div>
+
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
             <li>
-              <a href="/" className="hover:text-[#7DF9FF]">
-                Home
-              </a>
-            </li>
-            <li>
               <Link
                 href="/about"
-                className="hover:text-[#7DF9FF] cursor-pointer"
+                className={`cursor-pointer hover:text-[#7DF9FF] ${
+                  isActive("/about") ? "text-[#7DF9FF] font-bold" : ""
+                }`}
               >
                 About
               </Link>
@@ -39,15 +41,22 @@ export default function Header() {
             <li>
               <Link
                 href="/reservation"
-                className="hover:text-[#7DF9FF] cursor-pointer"
+                className={`cursor-pointer hover:text-[#7DF9FF] ${
+                  isActive("/reservation") ? "text-[#7DF9FF] font-bold" : ""
+                }`}
               >
                 Reservation
               </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-[#7DF9FF]">
+              <Link
+                href="/contact"
+                className={`cursor-pointer hover:text-[#7DF9FF] ${
+                  isActive("/contact") ? "text-[#7DF9FF] font-bold" : ""
+                }`}
+              >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -80,22 +89,14 @@ export default function Header() {
           >
             &times;
           </button>
-          <nav>
-            <ul className="text-center text-2xl space-y-6">
-              <li>
-                <a
-                  href="#"
-                  onClick={() => setIsOpen(false)}
-                  className="hover:text-[#7DF9FF]"
-                >
-                  Home
-                </a>
-              </li>
+          <nav className="hidden md:block">
+            <ul className="flex space-x-6">
               <li>
                 <Link
                   href="/about"
-                  onClick={() => setIsOpen(false)}
-                  className="hover:text-[#7DF9FF]"
+                  className={`cursor-pointer hover:text-[#7DF9FF] ${
+                    isActive("/about") ? "text-[#7DF9FF] font-bold" : ""
+                  }`}
                 >
                   About
                 </Link>
@@ -103,20 +104,22 @@ export default function Header() {
               <li>
                 <Link
                   href="/reservation"
-                  onClick={() => setIsOpen(false)}
-                  className="hover:text-[#7DF9FF]"
+                  className={`cursor-pointer hover:text-[#7DF9FF] ${
+                    isActive("/reservation") ? "text-[#7DF9FF] font-bold" : ""
+                  }`}
                 >
                   Reservation
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  onClick={() => setIsOpen(false)}
-                  className="hover:text-[#7DF9FF]"
+                <Link
+                  href="/contact"
+                  className={`cursor-pointer hover:text-[#7DF9FF] ${
+                    isActive("/contact") ? "text-[#7DF9FF] font-bold" : ""
+                  }`}
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
