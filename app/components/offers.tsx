@@ -6,6 +6,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "./WeeklyOffers.css";
 
 export default function WeeklyOffers() {
   return (
@@ -20,20 +21,16 @@ export default function WeeklyOffers() {
         </p>
       </div>
 
-      {/* Navigation Buttons (positioned outside the Swiper) */}
-      <div className="absolute top-1/2 left-4 z-10 transform -translate-y-1/2 swiper-button-prev text-blue-700 cursor-pointer"></div>
-      <div className="absolute top-1/2 right-4 z-10 transform -translate-y-1/2 swiper-button-next text-blue-700 cursor-pointer"></div>
-
-      <div className="px-6 max-w-7xl mx-auto relative">
+      <div className="relative px-6 max-w-7xl mx-auto">
         <Swiper
           modules={[Navigation, Pagination]}
           navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next-custom",
+            prevEl: ".swiper-button-prev-custom",
           }}
           pagination={{
+            el: ".swiper-pagination-custom",
             clickable: true,
-            dynamicBullets: false,
           }}
           loop={true}
           spaceBetween={24}
@@ -89,7 +86,10 @@ export default function WeeklyOffers() {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className="swiper-button-prev-custom absolute left-[-50px] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer" />
+        <div className="swiper-button-next-custom absolute right-[-50px] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer" />
       </div>
+      <div className="swiper-pagination-custom mt-8"></div>
     </section>
   );
 }
