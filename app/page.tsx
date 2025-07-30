@@ -9,7 +9,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
 import Countries from "./components/Countries";
-
+import Tab from "./components/homeTab";
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen font-[Poppins]">
@@ -24,6 +24,7 @@ export default function Page() {
       <div className="container mx-auto">
         <main className="flex-grow">
           <Countries />
+          <Tab />
         </main>
       </div>
       <Footer />

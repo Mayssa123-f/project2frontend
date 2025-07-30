@@ -7,6 +7,8 @@ import Banner from "../components/Banner";
 import WeeklyOffers from "../components/offers";
 import Discovery from "../components/discovery";
 import AccordionSection from "../components/Accordion";
+import FilterSection from "../components/filterCountries";
+
 import { Poppins } from "next/font/google";
 const poppins = Poppins({
   subsets: ["latin"],
@@ -28,6 +30,7 @@ export default function Page() {
         <div className="container mx-auto">
           <WeeklyOffers />
           <Discovery />
+          <FilterSection />
           <AccordionSection />
         </div>
       </main>
