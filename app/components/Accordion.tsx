@@ -38,7 +38,7 @@ export default function AccordionSection() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-12 mb-20">
+    <div className="max-w-2xl mx-auto mt-25 mb-20 px-2 sm:px-0">
       <h2 className="text-2xl font-bold mb-6 text-center">
         Frequently Asked Questions
       </h2>
@@ -50,7 +50,7 @@ export default function AccordionSection() {
           >
             <button
               onClick={() => toggle(index)}
-              className="flex justify-between items-center w-full px-4 py-3 text-left font-medium text-gray-800 hover:bg-gray-50 transition"
+              className="flex justify-between cursor-pointer items-center w-full px-4 py-3 text-left font-medium text-gray-800 hover:bg-gray-50 transition"
             >
               {item.question}
               <ChevronDown
@@ -60,7 +60,7 @@ export default function AccordionSection() {
               />
             </button>
             {openIndex === index && (
-              <div className="px-4 pb-4 text-gray-600">{item.answer}</div>
+              <div className="px-4 pb-4 mt-3 text-gray-600">{item.answer}</div>
             )}
           </div>
         ))}

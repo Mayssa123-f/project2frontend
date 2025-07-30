@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-5 py-2 rounded-full text-sm font-medium border transition duration-200 ${
+            className={`px-5 py-2 cursor-pointer rounded-full text-sm font-medium border transition duration-200 ${
               activeTab === tab.id
                 ? "bg-blue-600 text-white border-blue-600"
                 : "bg-white text-gray-700 border-gray-300 hover:bg-blue-100"

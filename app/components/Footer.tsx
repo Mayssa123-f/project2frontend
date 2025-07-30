@@ -11,7 +11,7 @@ export default function Footer() {
               <Image
                 src="/images/logo.png"
                 alt="BonVoyage Logo"
-                width={100}
+                width={150}
                 height={50}
               />{" "}
             </div>

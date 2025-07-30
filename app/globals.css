@@ -11,6 +11,21 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+/* Hide swiper arrows on mobile */
+@media (max-width: 767px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
+/* Show swiper arrows from md breakpoint (768px) and above */
+@media (min-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: block !important;
+  }
+}
 
 @media (prefers-color-scheme: dark) {
   :root {

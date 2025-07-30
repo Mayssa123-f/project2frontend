@@ -124,7 +124,7 @@ export default function ReservationForm() {
               <div className="text-center pt-2">
                 <button
                   type="submit"
-                  className="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+                  className="bg-blue-600 cursor-pointer text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition"
                 >
                   Make Your Reservation Now
                 </button>
