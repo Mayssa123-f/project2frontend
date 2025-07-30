@@ -89,14 +89,15 @@ export default function Header() {
           >
             &times;
           </button>
-          <nav className="hidden md:block">
-            <ul className="flex space-x-6">
+          <nav className="block md:hidden">
+            <ul className="flex flex-col items-center space-y-4">
               <li>
                 <Link
                   href="/about"
                   className={`cursor-pointer hover:text-[#7DF9FF] ${
                     isActive("/about") ? "text-[#7DF9FF] font-bold" : ""
                   }`}
+                  onClick={() => setIsOpen(false)}
                 >
                   About
                 </Link>
@@ -107,6 +108,7 @@ export default function Header() {
                   className={`cursor-pointer hover:text-[#7DF9FF] ${
                     isActive("/reservation") ? "text-[#7DF9FF] font-bold" : ""
                   }`}
+                  onClick={() => setIsOpen(false)}
                 >
                   Reservation
                 </Link>
@@ -117,6 +119,7 @@ export default function Header() {
                   className={`cursor-pointer hover:text-[#7DF9FF] ${
                     isActive("/contact") ? "text-[#7DF9FF] font-bold" : ""
                   }`}
+                  onClick={() => setIsOpen(false)}
                 >
                   Contact
                 </Link>
