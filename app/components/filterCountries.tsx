@@ -27,24 +27,25 @@ const CountryFilter = () => {
   });
 
   return (
-    <section className="w-full  mx-auto my-16 px-10">
-      <h2 className="text-3xl font-bold text-center mb-6">
+    <section className="w-full mx-auto my-16 px-4">
+      <h2 className="text-3xl font-bold text-center mb-10">
         Explore Our Destinations
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-4 mb-6">
+      {/* Centered Filters */}
+      <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-10">
         <input
           type="text"
           placeholder="Search by country"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="p-3 border rounded-lg"
+          className="p-3 w-64 border rounded-lg"
         />
 
         <select
           value={price}
           onChange={(e) => setPrice(e.target.value)}
-          className="p-3 border rounded-lg cursor-pointer"
+          className="p-3 w-64 border rounded-lg cursor-pointer"
         >
           <option value="">All Prices</option>
           <option value="low">Under $700</option>
@@ -53,7 +54,8 @@ const CountryFilter = () => {
         </select>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {/* Filtered Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {filtered.length === 0 ? (
           <p className="text-gray-500 col-span-full text-center">
             No destinations match your filter.
