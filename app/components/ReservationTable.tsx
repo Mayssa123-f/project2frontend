@@ -31,30 +31,36 @@ export default function PaymentInfoTable() {
       <h2 className="text-2xl font-bold mb-6 text-center">
         Payment Methods & Ticket Info
       </h2>
-      <table className="w-full table-auto border-collapse border border-gray-300">
-        <thead>
-          <tr className="bg-blue-600 text-white">
-            <th className="border border-gray-300 px-4 py-2">Payment Method</th>
-            <th className="border border-gray-300 px-4 py-2">
-              Amount Required
-            </th>
-            <th className="border border-gray-300 px-4 py-2">
-              Ticket Delivery Time
-            </th>
-            <th className="border border-gray-300 px-4 py-2">Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          {paymentMethods.map(({ method, amount, delivery, notes }, i) => (
-            <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-              <td className="border border-gray-300 px-4 py-2">{method}</td>
-              <td className="border border-gray-300 px-4 py-2">{amount}</td>
-              <td className="border border-gray-300 px-4 py-2">{delivery}</td>
-              <td className="border border-gray-300 px-4 py-2">{notes}</td>
+
+      {/* Add responsive wrapper here */}
+      <div className="overflow-x-auto">
+        <table className="w-full table-auto border-collapse border border-gray-300 min-w-[600px]">
+          <thead>
+            <tr className="bg-blue-600 text-white">
+              <th className="border border-gray-300 px-4 py-2">
+                Payment Method
+              </th>
+              <th className="border border-gray-300 px-4 py-2">
+                Amount Required
+              </th>
+              <th className="border border-gray-300 px-4 py-2">
+                Ticket Delivery Time
+              </th>
+              <th className="border border-gray-300 px-4 py-2">Notes</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {paymentMethods.map(({ method, amount, delivery, notes }, i) => (
+              <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                <td className="border border-gray-300 px-4 py-2">{method}</td>
+                <td className="border border-gray-300 px-4 py-2">{amount}</td>
+                <td className="border border-gray-300 px-4 py-2">{delivery}</td>
+                <td className="border border-gray-300 px-4 py-2">{notes}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
