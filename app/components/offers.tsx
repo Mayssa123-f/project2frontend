@@ -24,7 +24,7 @@ export default function WeeklyOffers() {
         <div className="hidden md:block absolute top-1/2 left-4 z-10 transform -translate-y-1/2 swiper-button-prev text-blue-700 cursor-pointer"></div>
         <div className="hidden md:block absolute top-1/2 right-4 z-10 transform -translate-y-1/2 swiper-button-next text-blue-700 cursor-pointer"></div>
 
-        <div className="px-6 max-w-7xl mx-auto relative">
+        <div className="px-4 max-w-7xl mx-auto relative">
           <Swiper
             modules={[Navigation, Pagination]}
             navigation={{

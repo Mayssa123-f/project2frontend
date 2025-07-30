@@ -38,7 +38,7 @@ export default function AccordionSection() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-25 mb-20 px-2 sm:px-0">
+    <div className=" mx-auto mt-25 mb-20 px-4 sm:px-10">
       <h2 className="text-2xl font-bold mb-6 text-center">
         Frequently Asked Questions
       </h2>

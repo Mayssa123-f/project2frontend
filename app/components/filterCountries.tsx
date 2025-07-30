@@ -27,7 +27,7 @@ const CountryFilter = () => {
   });
 
   return (
-    <section className="w-full max-w-4xl mx-auto my-16 px-4">
+    <section className="w-full  mx-auto my-16 px-10">
       <h2 className="text-3xl font-bold text-center mb-6">
         Explore Our Destinations
       </h2>
@@ -44,7 +44,7 @@ const CountryFilter = () => {
         <select
           value={price}
           onChange={(e) => setPrice(e.target.value)}
-          className="p-3 border rounded-lg"
+          className="p-3 border rounded-lg cursor-pointer"
         >
           <option value="">All Prices</option>
           <option value="low">Under $700</option>
