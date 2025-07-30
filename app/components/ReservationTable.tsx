@@ -28,7 +28,7 @@ export default function PaymentInfoTable() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto p-4 mt-20">
+    <div className="px-10 mx-auto p-4 mt-20">
       <h2 className="text-2xl font-bold mb-6 text-center">
         Payment Methods & Ticket Info
       </h2>

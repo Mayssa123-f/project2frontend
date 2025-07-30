@@ -33,19 +33,19 @@ const CountryFilter = () => {
       </h2>
 
       {/* Centered Filters */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-10">
+      <div className="flex flex-col sm:flex-row sm:justify-center items-center gap-4 mb-6 w-full">
         <input
           type="text"
           placeholder="Search by country"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="p-3 w-64 border rounded-lg"
+          className="w-full sm:w-[300px] p-3 border rounded-lg"
         />
 
         <select
           value={price}
           onChange={(e) => setPrice(e.target.value)}
-          className="p-3 w-64 border rounded-lg cursor-pointer"
+          className="w-full sm:w-[300px] p-3 border rounded-lg cursor-pointer"
         >
           <option value="">All Prices</option>
           <option value="low">Under $700</option>

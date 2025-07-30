@@ -4,7 +4,7 @@ import React from "react";
 export default function ReservationForm() {
   return (
     <section className="bg-white py-16 px-4 flex justify-center">
-      <div className="w-full max-w-5xl bg-white rounded-3xl shadow-lg overflow-hidden">
+      <div className="w-full px-10 bg-white rounded-3xl shadow-lg overflow-hidden">
         {/* Top Contact Info */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 py-10 border-b">
           <div className="text-center space-y-2">

@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
 
   const active = tabs.find((tab) => tab.id === activeTab);
   return (
-    <section className="w-full max-w-6xl mx-auto my-20 px-4">
+    <section className="w-full mx-auto my-20 px-10">
       <h2 className="text-4xl font-bold text-center mb-12">Why Choose Us</h2>
 
       {/* Tab buttons */}
